@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       .survey {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 35px;
+            font-weight: 500;
+        }
+        .skill-container{
+                width: 70%;
+                background-color: white;
+                height: 30px;
+                overflow-y: hidden;
+        }
+
+        .skills {
+    text-align: right;
+    height: max-content;
+    color: white;
+
+}
+ .bar {
+        width: 0%; 
+        background-color: #04AA6D;
+  
+
+}
+.bar p{
+        font-size: 17px;
+        color: white;
+     
+        padding-right: 3%;
+       
+}
+@keyframes unsatisfied{
+ 0%{
+        width:5%;
+
+ }
+ 
+
+
+ 100%{
+        width:40%;
+        
+ }
+}
+@keyframes neutral{
+ 0%{
+        width:5%;
+
+ }
+ 
+ 
+ 
+ 100%{
+        width:50%;
+        
+ }
+}
+@keyframes satisfied{
+ 0%{
+        width:5%;
+
+ }
+ 
+ 
+ 
+ 100%{
+        width:90%;
+        
+ }
+}
+        .container {
+            background-color: lavender;
+            overflow: hidden;
+            background-size: cover;
+        }
+
+        #title {
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .radiolist {
+    margin-left: 1%;
+}
+        #survey-form {
+            background-color: rgba(27, 27, 50, 0.6);
+            max-width: 90%;
+            margin: auto;
+            margin-bottom: 1rem;
+            padding: 2rem 1.5rem;
+            position: relative;
+            border-radius: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 1.5rem 0rem;
+        }
+
+        label {
+            color: white;
+            font-size: 20px;
+            padding: 0.2rem 7px;
+        }
+
+        input[type='radio'] {
+            margin: 0 0.5rem 0 0;
+        }
+
+        input[type='checkbox'] {
+            margin: 0 0.5rem 0 0;
+        }
+
+        .box-area {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            list-style: none;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-evenly;
+        }
+
+       
+
+        @media (min-width:540px) {
+            #survey-form {
+                max-width: 80%;
+                margin: auto;
+                margin-bottom: 1rem;
+                padding: 2rem 3.5rem;
+                position: relative;
+                border-radius: 1.5rem;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="container survey">
+
+        <main>
+            <form action="" id="survey-form">
+
+                <div class="form-group radio-group "> 
+                    
+                    <label for="">1. How well informed were you kept during your claim process ?</label>
+
+                    <div class="radiolist">
+                       
+                            <input type="radio" name="radiogroup1" value="1" id="radiogroup1" onclick="myFunction(this,1)">
+                            <label for="radiogroup1">1</label>
+                        
+                            <input type="radio" name="radiogroup1" value="2" id="radiogroup2"  onclick="myFunction(this,2)">
+                            <label for="radiogroup2">2</label>
+    
+                       
+                            <input type="radio" name="radiogroup1" value="3" id="radiogroup3" onclick="myFunction(this,3)">
+                            <label for="radiogroup3">3</label>
+                        
+                            <input type="radio" name="radiogroup1" value="4" id="radiogroup4" onclick="myFunction(this,4)">
+                            <label for="radiogroup4">4</label>
+                        
+                            <input type="radio" name="radiogroup1" value="5" id="radiogroup5" onclick="myFunction(this,5)">
+                            <label for="radiogroup5">5</label>
+                        
+                            <input type="radio" name="radiogroup1" value="6" id="radiogroup6" onclick="myFunction(this,6)">
+                            <label for="radiogroup6">6</label>
+                        
+                            <input type="radio" name="radiogroup1" value="7" id="radiogroup7" onclick="myFunction(this,7)">
+                            <label for="radiogroup7">7</label>
+                        
+                            <input type="radio" name="radiogroup1" value="8" id="radiogroup8" onclick="myFunction(this,8)">
+                            <label for="radiogroup8">8</label>
+                        
+                            <input type="radio" name="radiogroup1" value="9" id="radiogroup9" onclick="myFunction(this,9)">
+                            <label for="radiogroup9">9</label>
+                        
+                            <input type="radio" name="radiogroup1" value="10" id="radiogroup10" onclick="myFunction(this,10)">
+                            <label for="radiogroup10">10</label>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skills bar"><p></p></div>
+                      </div>
+
+                </div>
+
+                    <div class="form-group radio-group "> 
+                        
+                        <label for="">2. How timely was your claim process?</label>
+
+                        <div class="radiolist">
+                       
+                                <input type="radio" name="radiogroup2" value="1" id="radiogroup1" onclick="myFunction(this,1)">
+                                <label for="radiogroup1">1</label>
+                            
+                                <input type="radio" name="radiogroup2" value="2" id="radiogroup2"  onclick="myFunction(this,2)">
+                                <label for="radiogroup2">2</label>
+        
+                           
+                                <input type="radio" name="radiogroup2" value="3" id="radiogroup3" onclick="myFunction(this,3)">
+                                <label for="radiogroup3">3</label>
+                            
+                                <input type="radio" name="radiogroup2" value="4" id="radiogroup4" onclick="myFunction(this,4)">
+                                <label for="radiogroup4">4</label>
+                            
+                                <input type="radio" name="radiogroup2" value="5" id="radiogroup5" onclick="myFunction(this,5)">
+                                <label for="radiogroup5">5</label>
+                            
+                                <input type="radio" name="radiogroup2" value="6" id="radiogroup6" onclick="myFunction(this,6)">
+                                <label for="radiogroup6">6</label>
+                            
+                                <input type="radio" name="radiogroup2" value="7" id="radiogroup7" onclick="myFunction(this,7)">
+                                <label for="radiogroup7">7</label>
+                            
+                                <input type="radio" name="radiogroup2" value="8" id="radiogroup8" onclick="myFunction(this,8)">
+                                <label for="radiogroup8">8</label>
+                            
+                                <input type="radio" name="radiogroup2" value="9" id="radiogroup9" onclick="myFunction(this,9)">
+                                <label for="radiogroup9">9</label>
+                            
+                                <input type="radio" name="radiogroup2" value="10" id="radiogroup10" onclick="myFunction(this,10)">
+                                <label for="radiogroup10">10</label>
+                        </div>
+
+                        <div class="skill-container">
+                                <div class="skills bar"><p></p></div>
+                              </div>
+                    </div>
+
+                        <div class="form-group radio-group third"> 
+                            
+                            <label for="">3. How well did you understand the outcome of your claim process?</label>
+
+                            <div class="radiolist">
+                       
+                                <input type="radio" name="radiogroup3" value="1" id="radiogroup1" onclick="myFunction(this,1)">
+                                <label for="radiogroup1">1</label>
+                            
+                                <input type="radio" name="radiogroup3" value="2" id="radiogroup2"  onclick="myFunction(this,2)">
+                                <label for="radiogroup2">2</label>
+        
+                           
+                                <input type="radio" name="radiogroup3" value="3" id="radiogroup3" onclick="myFunction(this,3)">
+                                <label for="radiogroup3">3</label>
+                            
+                                <input type="radio" name="radiogroup3" value="4" id="radiogroup4" onclick="myFunction(this,4)">
+                                <label for="radiogroup4">4</label>
+                            
+                                <input type="radio" name="radiogroup3" value="5" id="radiogroup5" onclick="myFunction(this,5)">
+                                <label for="radiogroup5">5</label>
+                            
+                                <input type="radio" name="radiogroup3" value="6" id="radiogroup6" onclick="myFunction(this,6)">
+                                <label for="radiogroup6">6</label>
+                            
+                                <input type="radio" name="radiogroup3" value="7" id="radiogroup7" onclick="myFunction(this,7)">
+                                <label for="radiogroup7">7</label>
+                            
+                                <input type="radio" name="radiogroup3" value="8" id="radiogroup8" onclick="myFunction(this,8)">
+                                <label for="radiogroup8">8</label>
+                            
+                                <input type="radio" name="radiogroup3" value="9" id="radiogroup9" onclick="myFunction(this,9)">
+                                <label for="radiogroup9">9</label>
+                            
+                                <input type="radio" name="radiogroup3" value="10" id="radiogroup10" onclick="myFunction(this,10)">
+                                <label for="radiogroup10">10</label>
+                        </div>
+
+                        <div class="skill-container">
+                                <div class="skills bar"><p></p></div>
+                              </div>
+                        </div>
+
+                            <div class="form-group radio-group fourth"> 
+                                
+                                <label for="">4. How likely are you to recommend AFI to a friend or colleague?
+                                </label>
+                                
+                                <div class="radiolist">
+                       
+                                        <input type="radio" name="radiogroup4" value="1" id="radiogroup1" onclick="myFunction(this,1)">
+                                        <label for="radiogroup1">1</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="2" id="radiogroup2"  onclick="myFunction(this,2)">
+                                        <label for="radiogroup2">2</label>
+                
+                                   
+                                        <input type="radio" name="radiogroup4" value="3" id="radiogroup3" onclick="myFunction(this,3)">
+                                        <label for="radiogroup3">3</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="4" id="radiogroup4" onclick="myFunction(this,4)">
+                                        <label for="radiogroup4">4</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="5" id="radiogroup5" onclick="myFunction(this,5)">
+                                        <label for="radiogroup5">5</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="6" id="radiogroup6" onclick="myFunction(this,6)">
+                                        <label for="radiogroup6">6</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="7" id="radiogroup7" onclick="myFunction(this,7)">
+                                        <label for="radiogroup7">7</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="8" id="radiogroup8" onclick="myFunction(this,8)">
+                                        <label for="radiogroup8">8</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="9" id="radiogroup9" onclick="myFunction(this,9)">
+                                        <label for="radiogroup9">9</label>
+                                    
+                                        <input type="radio" name="radiogroup4" value="10" id="radiogroup10" onclick="myFunction(this,10)">
+                                        <label for="radiogroup10">10</label>
+                                </div>
+                                <div class="skill-container">
+                                        <div class="skills bar"><p></p></div>
+                                      </div>
+                                  
+                            </div>
+                            <div class="form-group">
+
+                                <label for="">Comments</label>
+
+                                <textarea name="textarea-work" id="textarea-work" cols="30" rows="10"></textarea>
+                            </div>  
+            </form>
+
+        </main>
+
+    </div>
+
+
+    <script>
+        function myFunction(elem, i) {
+                var parentDiv=elem.parentNode;
+                var statBarmain=parentDiv.nextElementSibling;
+                var statBar=statBarmain.firstElementChild;
+                var statP=statBar.firstElementChild;
+          if (i < 4) {
+                statP.innerText="Unsatisfied ";
+               statBar.setAttribute("style","animation:unsatisfied 3s normal forwards;");
+        // statBar.setAttribute("style","width:40%;");
+        }
+        else if (i > 3 && i<8) {
+                statP.innerText="Neutral ";
+        statBar.setAttribute("style","animation:neutral 3s normal forwards;");
+        // statBar.setAttribute("style","width:50%;");
+        }
+        else {
+                statP.innerText="Satisfied ";
+        statBar.setAttribute("style","animation:satisfied 3s normal forwards;");
+        // statBar.setAttribute("style","width:90%;");
+        }
+}
+      </script>
+
+
+
+</body>
+
+</html>
